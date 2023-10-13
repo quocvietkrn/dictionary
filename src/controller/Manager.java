@@ -21,7 +21,7 @@ public class Manager {
     }
     
   //add new word
-    public static void addNewWord(HashMap<String, String> hm) {
+    public void addNewWord(HashMap<String, String> hm) {
         System.out.print("Enter Enlish: ");
         String english = Validation.checkInputString();
         if (!checkKeywordExist(hm, english)) {
@@ -37,7 +37,7 @@ public class Manager {
     }
 
     //delete word
-    public static void deleteWord(HashMap<String, String> hm) {
+    public void deleteWord(HashMap<String, String> hm) {
         System.out.print("Enter english: ");
         String english = Validation.checkInputString();
         hm.remove(english);
@@ -45,7 +45,7 @@ public class Manager {
     }
 
     //translate
-    public static void translate(HashMap<String, String> hm) {
+    public void translate(HashMap<String, String> hm) {
         System.out.print("Enter english: ");
         String english = Validation.checkInputString();
         Set<Map.Entry<String, String>> entries = hm.entrySet();
@@ -59,7 +59,7 @@ public class Manager {
     }
 
     //check key englist exist
-    public static boolean checkKeywordExist(HashMap<String, String> hm, String english) {
+    public boolean checkKeywordExist(HashMap<String, String> hm, String english) {
         Set set = hm.entrySet();
         Iterator iterator = set.iterator();
         while (iterator.hasNext()) {

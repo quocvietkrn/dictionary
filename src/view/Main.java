@@ -8,18 +8,19 @@ import java.util.HashMap;
 public class Main {
  public static void main(String[] args) {
         HashMap<String, String> hm = new HashMap<>();
+        Manager manager = new Manager();
         
         while (true) {
-            int choice = Manager.menu();
+            int choice = manager.menu();
             switch (choice) {
                 case 1:
-                    Manager.addNewWord(hm);
+                    manager.addNewWord(hm);
                     break;
                 case 2:
-                    Manager.deleteWord(hm);
+                    manager.deleteWord(hm);
                     break;
                 case 3:
-                    Manager.translate(hm);
+                    manager.translate(hm);
                     break;
                 case 4:
                     return;

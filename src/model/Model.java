@@ -1,7 +1,6 @@
 
 package model;
 
-import controller.Manager;
 
 
 public class Model {
